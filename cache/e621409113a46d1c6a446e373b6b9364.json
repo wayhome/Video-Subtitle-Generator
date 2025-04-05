@@ -1,0 +1,411 @@
+{
+  "text": " on the exchange. Let's wait for the orders to stop coming in. So we can see over here that it is still sampling. Now the orders are starting to come in, right, and we have five orders, and we're going to start getting fills, right? So we have some order fills and now all of these positions are hatched. So let's take a look here. We have five open positions here and four open positions here because we did not manage to hitch on one of the contracts so we don't have a link position because our entry is probably not rounded. So we probably can only trade in units of one here, but here we got field 32.2. Anyway, so let's look at the field positions and see whether we can, whether this makes sense. So for Ave. So let's look at the field positions and see whether we can, whether this makes sense. So for Avey, we have entry price of 161.15 and we managed to sell it at 163.35. So per contract we have about a 20 cent of profit or rather a 20 cent of favorable entry price. So we have 2.2 aveh here, we have 2.2 afare short, so this is hedged. For Avex we have 12.11. The entry price is at 29.285. So here we sold again for a higher price than we entered. And in FTM we have entry at 0.702. And here we short at 0.702. For I&J we have 16.5 contracts and we entered at 21.5. And we again sold it at a higher price than we entered four. For link, you see that the position just disappeared and that's because we probably ran the hedge excess after the loop. So after two minutes we are going to get out of the positions that are not hedged. So we got out of the link positions. And now again we are hedged. So we have a perfect hedging here. So sold is 2.32. We entered at 152.83. So this is how much we bought it for and we sold it for a higher price. So not only are we having a positive price basis, let's go ahead and take a look at whether we are actually getting a positive Funding premium or positive funding payments the trade history. So let's refresh And this are the positions that we have opened through the API so you can see that we have a mix of taker and maker orders, right? So sometimes we are making here and taking here. And you can see that we have, as refresh, in the trade history you see at 24, at 1624, we bought BCH-USDC for 329.54, and we sold it at 329.82 at the next second. So one second later we make the trade. So again this is a mix of the maker and the taker orders, as you can see, and the trade values depend on the liquidity that is present inside the order book. Now we want to see if the positions that we are holding actually have a positive funding premium. So we're going to go into this funding comparison page so you can go here more funding comparison and over here you will see the contracts that are have funding differential. So let's look at the yearly APR and let's take a look. The RV position has a positive funding premium, right? You see, if it's red in color, say short coin on hyperliquid and long on Binance to receive these funding premiums. So our Binance H.L.R. is actually, this is a positive funding premium. So not only are we getting paid to enter into this position, we are also getting paid to hold this position because of this funding differential. On the other hand, if we look at a coin that is positive, then we will say, this green color means that we want to long on hyperloquid and shorten Binax. So if you look at AVEX, this actually has no funding differential but what we did in fact get is a better price. So again like I say this is not just a funding arbitrage, right? It is actually a combination of cross-exchange market making as well as funding arbitrage, right? It is actually a combination of cross-exchange market making as well as funding arbitrage, as well as the triangular arbitrage because this is AVEX-USDT and this is AVEX USDC and you see that our entry price is 29.23 and we sold it at a higher price. So depending on the FX adjustment, we can have triangular arbitrage positions also, right? It is not a pure funding arbitrage and there is no such thing as a pure funding arbitrage because the funding component is always baked into the price. So here we have BCH. BCH again is a positive funding position. Here we are getting paid to hold this position. We can look at DOCH. We're getting paid to hold this also. FTM. Here we are not paying, but we are also not getting paid to hold a position. I&J is also a neutral position, whereas Solana also pays to hold. So, right, so you see that our orders are in fact working and that we have this funding arbitrage working for us and you can see that naturally there is going to be a tendency to go long on one exchange and short on the other exchange. So, the hope is that your EV, your dynamic EV threshold will help to balance this out so that there is a equal number or there is a matching exposure on both exchanges. So what we have applied is just a theuristic right? We applied some mid-value of 0.0015 and then we just gave it plus minus 0.005. So there's no signs to this EV value and of course if you want to optimize it then you can try to make it better with some statistical analysis, right? So get some data and then see how you want to optimize your portfolio and you can do some operations research on it. But since that is out of the scope of this lecture, we're not going to talk about that here. We're just saying that a lot of the decisions that we made, the key decisions that we made, such as what is the threshold for which we want to make trades, so o'n and so forth, are actually somewhat arbitrary. And of course, we can make a better decision by actually doing the research. So this seems to be working. The algorithm that we wrote seems to be running fine and going through multiple iterations of the loop. And you can see that we are continuously printing out information on our terminal.",
+  "chunks": [
+    {
+      "timestamp": [
+        0.0,
+        25.2
+      ],
+      "text": " on the exchange. Let's wait for the orders to stop coming in. So we can see over here that it is still sampling. Now the orders are starting to come in, right, and we have five orders, and we're going to start getting fills, right? So we have some order fills and"
+    },
+    {
+      "timestamp": [
+        25.2,
+        33.68
+      ],
+      "text": " now all of these positions are hatched. So let's take a look here. We have five"
+    },
+    {
+      "timestamp": [
+        33.68,
+        38.64
+      ],
+      "text": " open positions here and four open positions here because we did not manage to"
+    },
+    {
+      "timestamp": [
+        38.64,
+        44.84
+      ],
+      "text": " hitch on one of the contracts so we don't have a link position"
+    },
+    {
+      "timestamp": [
+        44.84,
+        52.84
+      ],
+      "text": " because our entry is probably not"
+    },
+    {
+      "timestamp": [
+        52.84,
+        54.84
+      ],
+      "text": " rounded."
+    },
+    {
+      "timestamp": [
+        54.84,
+        40.0
+      ],
+      "text": ""
+    },
+    {
+      "timestamp": [
+        44.8,
+        51.28
+      ],
+      "text": " So we probably can only trade in units of one here, but here we got field 32.2. Anyway, so let's look at the field positions and see whether we can, whether this makes"
+    },
+    {
+      "timestamp": [
+        51.28,
+        54.28
+      ],
+      "text": " sense."
+    },
+    {
+      "timestamp": [
+        54.28,
+        67.0
+      ],
+      "text": " So for Ave. So let's look at the field positions and see whether we can, whether this makes sense."
+    },
+    {
+      "timestamp": [
+        67.0,
+        79.0
+      ],
+      "text": " So for Avey, we have entry price of 161.15 and we managed to sell it at 163.35."
+    },
+    {
+      "timestamp": [
+        79.0,
+        90.0
+      ],
+      "text": " So per contract we have about a 20 cent of profit or rather a 20 cent of favorable entry price."
+    },
+    {
+      "timestamp": [
+        90.0,
+        95.0
+      ],
+      "text": " So we have 2.2 aveh here, we have 2.2 afare short, so this is hedged."
+    },
+    {
+      "timestamp": [
+        95.0,
+        153.4
+      ],
+      "text": " For Avex we have 12.11. The entry price is at 29.285. So here we sold again for a higher price than we entered. And in FTM we have entry at 0.702. And here we short at 0.702. For I&J we have 16.5 contracts and we entered at 21.5. And we again sold it at a higher price than we entered four. For link, you see that the position just disappeared and that's because we probably ran the hedge excess after the loop. So after two minutes we are going to get out of the positions that are not hedged. So we got out of the link positions. And now again we are hedged. So we have a perfect hedging here. So sold is 2.32. We entered at 152.83. So this"
+    },
+    {
+      "timestamp": [
+        153.4,
+        158.04
+      ],
+      "text": " is how much we bought it for and we sold it for a higher price. So not only are we having"
+    },
+    {
+      "timestamp": [
+        158.04,
+        166.24
+      ],
+      "text": " a positive price basis, let's go ahead and take a look at whether we are actually getting a positive"
+    },
+    {
+      "timestamp": [
+        171.0,
+        173.56
+      ],
+      "text": " Funding premium or positive funding payments the trade history. So let's refresh"
+    },
+    {
+      "timestamp": [
+        184.2,
+        189.0
+      ],
+      "text": " And this are the positions that we have opened through the API so you can see that we have a mix of taker and maker orders, right? So sometimes we are making here and taking here. And you can see that we have, as refresh,"
+    },
+    {
+      "timestamp": [
+        191.0,
+        195.0
+      ],
+      "text": " in the trade history you see at 24, at 1624,"
+    },
+    {
+      "timestamp": [
+        195.0,
+        206.8
+      ],
+      "text": " we bought BCH-USDC for 329.54, and we sold it at 329.82 at the next second."
+    },
+    {
+      "timestamp": [
+        206.8,
+        210.4
+      ],
+      "text": " So one second later we make the trade."
+    },
+    {
+      "timestamp": [
+        210.4,
+        214.68
+      ],
+      "text": " So again this is a mix of the maker and the taker orders,"
+    },
+    {
+      "timestamp": [
+        214.68,
+        221.44
+      ],
+      "text": " as you can see, and the trade values depend on the liquidity that is present inside the order book."
+    },
+    {
+      "timestamp": [
+        221.44,
+        227.0
+      ],
+      "text": " Now we want to see if the positions that we are holding actually have a positive funding premium."
+    },
+    {
+      "timestamp": [
+        227.0,
+        240.0
+      ],
+      "text": " So we're going to go into this funding comparison page so you can go here more funding comparison and over here you will see the contracts that are have funding differential."
+    },
+    {
+      "timestamp": [
+        240.0,
+        245.0
+      ],
+      "text": " So let's look at the yearly APR and let's take a look."
+    },
+    {
+      "timestamp": [
+        245.0,
+        250.0
+      ],
+      "text": " The RV position has a positive funding premium, right?"
+    },
+    {
+      "timestamp": [
+        250.0,
+        260.0
+      ],
+      "text": " You see, if it's red in color, say short coin on hyperliquid and long on Binance to receive these funding premiums."
+    },
+    {
+      "timestamp": [
+        260.0,
+        265.2
+      ],
+      "text": " So our Binance H.L.R. is actually, this is a positive funding premium."
+    },
+    {
+      "timestamp": [
+        265.2,
+        270.96
+      ],
+      "text": " So not only are we getting paid to enter into this position, we are also getting paid to"
+    },
+    {
+      "timestamp": [
+        270.96,
+        275.92
+      ],
+      "text": " hold this position because of this funding differential."
+    },
+    {
+      "timestamp": [
+        275.92,
+        281.88
+      ],
+      "text": " On the other hand, if we look at a coin that is positive, then we will say, this green"
+    },
+    {
+      "timestamp": [
+        281.88,
+        291.08
+      ],
+      "text": " color means that we want to long on hyperloquid and shorten Binax. So if you look at AVEX, this actually has no funding"
+    },
+    {
+      "timestamp": [
+        291.08,
+        297.16
+      ],
+      "text": " differential but what we did in fact get is a better price. So again like I say"
+    },
+    {
+      "timestamp": [
+        297.16,
+        303.0
+      ],
+      "text": " this is not just a funding arbitrage, right? It is actually a combination of"
+    },
+    {
+      "timestamp": [
+        303.0,
+        306.88
+      ],
+      "text": " cross-exchange market making as well as funding arbitrage, right? It is actually a combination of cross-exchange market making as well as"
+    },
+    {
+      "timestamp": [
+        307.8,
+        315.28
+      ],
+      "text": " funding arbitrage, as well as the triangular arbitrage because this is AVEX-USDT and this is AVEX"
+    },
+    {
+      "timestamp": [
+        315.28,
+        322.4
+      ],
+      "text": " USDC and you see that our entry price is 29.23 and we sold it at a higher price. So depending on"
+    },
+    {
+      "timestamp": [
+        323.44,
+        328.24
+      ],
+      "text": " the FX adjustment, we can have triangular"
+    },
+    {
+      "timestamp": [
+        328.24,
+        333.2
+      ],
+      "text": " arbitrage positions also, right? It is not a pure funding arbitrage and there is no such"
+    },
+    {
+      "timestamp": [
+        333.2,
+        336.48
+      ],
+      "text": " thing as a pure funding arbitrage because the funding component is always baked into the"
+    },
+    {
+      "timestamp": [
+        336.48,
+        342.16
+      ],
+      "text": " price. So here we have BCH. BCH again is a positive funding position. Here we are getting"
+    },
+    {
+      "timestamp": [
+        342.16,
+        350.96
+      ],
+      "text": " paid to hold this position. We can look at DOCH. We're getting paid to hold this also. FTM. Here we are not paying,"
+    },
+    {
+      "timestamp": [
+        350.96,
+        358.96
+      ],
+      "text": " but we are also not getting paid to hold a position. I&J is also a neutral position, whereas Solana also"
+    },
+    {
+      "timestamp": [
+        358.96,
+        387.6
+      ],
+      "text": " pays to hold. So, right, so you see that our orders are in fact working and that we have this funding arbitrage working for us and you can see that naturally there is going to be a tendency to go long on one exchange and short on the other exchange. So, the hope is that your EV, your dynamic EV threshold will help"
+    },
+    {
+      "timestamp": [
+        387.6,
+        393.32
+      ],
+      "text": " to balance this out so that there is a equal number or there is a matching"
+    },
+    {
+      "timestamp": [
+        393.32,
+        399.36
+      ],
+      "text": " exposure on both exchanges. So what we have applied is just a theuristic right?"
+    },
+    {
+      "timestamp": [
+        399.36,
+        427.04
+      ],
+      "text": " We applied some mid-value of 0.0015 and then we just gave it plus minus 0.005. So there's no signs to this EV value and of course if you want to optimize it then you can try to make it better with some statistical analysis, right? So get some data and then see how you want to optimize your portfolio and you can do some operations research on it. But since that is out of the scope of this lecture,"
+    },
+    {
+      "timestamp": [
+        427.04,
+        428.76
+      ],
+      "text": " we're not going to talk about that here."
+    },
+    {
+      "timestamp": [
+        428.76,
+        431.6
+      ],
+      "text": " We're just saying that a lot of the decisions that we made,"
+    },
+    {
+      "timestamp": [
+        431.6,
+        436.0
+      ],
+      "text": " the key decisions that we made, such as what is the threshold"
+    },
+    {
+      "timestamp": [
+        436.0,
+        437.68
+      ],
+      "text": " for which we want to make trades,"
+    },
+    {
+      "timestamp": [
+        437.68,
+        440.6
+      ],
+      "text": " so o'n and so forth, are actually somewhat arbitrary."
+    },
+    {
+      "timestamp": [
+        440.6,
+        448.0
+      ],
+      "text": " And of course, we can make a better decision by actually doing the research."
+    },
+    {
+      "timestamp": [
+        448.0,
+        453.0
+      ],
+      "text": " So this seems to be working."
+    },
+    {
+      "timestamp": [
+        453.0,
+        458.0
+      ],
+      "text": " The algorithm that we wrote seems to be running fine"
+    },
+    {
+      "timestamp": [
+        458.0,
+        461.0
+      ],
+      "text": " and going through multiple iterations of the loop."
+    },
+    {
+      "timestamp": [
+        461.0,
+        467.0
+      ],
+      "text": " And you can see that we are continuously printing out information on our terminal."
+    }
+  ]
+}
